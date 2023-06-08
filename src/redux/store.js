@@ -13,8 +13,6 @@ import { contactReducer } from "./phoneSlise";
 import { filterReducer } from "./filterSlise";
 
 
-
-
 // const persistConfig = {
 //   key: 'contacts',
 //   storage,
