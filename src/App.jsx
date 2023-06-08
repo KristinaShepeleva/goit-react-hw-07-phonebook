@@ -36,12 +36,3 @@ const App = () => {
 }
 
 export default App;
-
-
-// const dispatch = useDispatch();
-//   const isLoading = useSelector(getIsLoading);
-//   const error = useSelector(getError);
-
-//   useEffect(() => {
-//     dispatch(fetchTasks());
-//   }, [dispatch]);

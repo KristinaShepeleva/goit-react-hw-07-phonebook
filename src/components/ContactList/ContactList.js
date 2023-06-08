@@ -12,7 +12,7 @@ function ContactList() {
 
   const contacts = items.filter(item =>
       item.name.toLowerCase().trim().includes(filter.toLowerCase().trim())
-    );
+    ).sort((first, second) => first.name.localeCompare(second.name));
   
 
      return (
