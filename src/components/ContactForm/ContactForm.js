@@ -18,14 +18,14 @@ const ContactForm = () => {
     const newContact = {
       id: nanoid(),
       name: e.target.elements.name.value,
-      number: e.target.elements.number.value,
+      phone: e.target.elements.phone.value,
    };
 
    if (contacts.find(contact => contact.name.toLowerCase() === newContact.name.toLowerCase())) {
      return alert(`${newContact.name} is already in contacts`);
    }
-   if (contacts.find(contact => contact.number === newContact.number)) {
-      return alert(`${newContact.number} is already in contacts`);  
+   if (contacts.find(contact => contact.phone === newContact.phone)) {
+      return alert(`${newContact.phone} is already in contacts`);  
     }
 
     dispatch(addContactThunk(newContact));
@@ -50,7 +50,7 @@ const ContactForm = () => {
             Number
             <input className={css.input}
               type="tel"
-              name="number"
+              name="phone"
               pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
               title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
               required
